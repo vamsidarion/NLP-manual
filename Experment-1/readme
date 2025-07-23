@@ -1,0 +1,155 @@
+Perfect! Here's the **first section of your NLP Lab Manual**, written in a **clear, student-friendly way**, with minimal code and step-by-step explanation.
+
+---
+
+## **Lab 1: Installation and Exploring Features of NLTK and spaCy | Downloading WordCloud and Corpora**
+
+### **Objective**
+To understand how to:
+1. Install and set up NLTK and spaCy libraries.
+2. Install and use WordCloud.
+3. Download and explore built-in corpora.
+4. Understand the basic features of NLTK and spaCy for NLP tasks.
+
+---
+
+### **1. What is NLTK?**
+**NLTK (Natural Language Toolkit)** is a Python library used for working with human language data (text). It provides easy-to-use interfaces to over 50 corpora and lexical resources.
+
+### **2. What is spaCy?**
+**spaCy** is a powerful open-source library for industrial-strength NLP in Python. It's fast, accurate, and designed for real-world applications like named entity recognition, dependency parsing, etc.
+
+---
+
+### **3. Installing NLTK, spaCy, and WordCloud**
+
+#### **Step 1: Install the libraries**
+Open your **command prompt (Windows)** or **terminal (Mac/Linux)** and run the following commands:
+
+```bash
+pip install nltk
+pip install spacy
+pip install wordcloud
+```
+
+#### **Step 2: Download spaCy language model**
+spaCy needs a language model to work with English text. Run this command:
+
+```bash
+python -m spacy download en_core_web_sm
+```
+
+#### **Step 3: Download NLTK Corpora**
+Some useful datasets (like stopwords, punkt tokenizer) need to be downloaded separately. Run the following in **Python shell**:
+
+```python
+import nltk
+nltk.download()
+```
+
+From the pop-up window, select and download:
+- `punkt`
+- `stopwords`
+- `gutenberg` (optional)
+
+---
+
+### **4. Basic Features of NLTK and spaCy**
+
+#### **NLTK Features (Basic Examples)**
+
+##### **Tokenization**
+Splitting text into words or sentences.
+
+```python
+from nltk.tokenize import word_tokenize, sent_tokenize
+
+text = "Hello! NLP is fun. Let's learn together."
+
+words = word_tokenize(text)
+sentences = sent_tokenize(text)
+
+print("Words:", words)
+print("Sentences:", sentences)
+```
+
+##### **Stopwords Removal**
+Stopwords are common words like 'the', 'is', etc. that are often removed in NLP tasks.
+
+```python
+from nltk.corpus import stopwords
+
+stop_words = set(stopwords.words('english'))
+filtered_words = [word for word in words if word.lower() not in stop_words]
+
+print("Filtered Words:", filtered_words)
+```
+
+---
+
+#### **spaCy Features (Basic Examples)**
+
+##### **Named Entity Recognition (NER)**
+
+```python
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+text = "Apple is looking at buying U.K. startup for $1 billion"
+doc = nlp(text)
+
+for ent in doc.ents:
+    print(ent.text, "-", ent.label_)
+```
+
+##### **Part-of-Speech (POS) Tagging**
+
+```python
+for token in doc:
+    print(token.text, "-", token.pos_, "-", token.dep_)
+```
+
+---
+
+### **5. WordCloud Example**
+
+```python
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+text = "NLP is amazing. Natural Language Processing makes machines understand human language."
+
+wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
+
+plt.figure(figsize=(10,5))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off")
+plt.show()
+```
+
+---
+
+### **6. Exploring Built-in Corpora (Optional)**
+
+You can load and explore sample texts from NLTK:
+
+```python
+from nltk.corpus import gutenberg
+
+# Load a text from the Gutenberg corpus
+text = gutenberg.raw('austen-emma.txt')
+print(text[:500])  # First 500 characters
+```
+
+---
+
+### **Summary**
+In this lab, you:
+✅ Installed **NLTK**, **spaCy**, and **WordCloud**  
+✅ Downloaded important **corpora and models**  
+✅ Learned to **tokenize**, **remove stopwords**, and **extract entities**  
+✅ Created a **WordCloud** from text
+
+---
+
+Let me know if you want the **next question** or would like to include screenshots, exercises, or assignments with this section!
