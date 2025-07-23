@@ -1,17 +1,4 @@
-Absolutely! Below is a **professional and complete `README.md`** file that you can use for your **NLP Lab Manual** containing **15 experiments**.
-
-This `README` is written in **Markdown** format, suitable for GitHub, GitLab, or any documentation system. It includes:
-
-✅ A project title and description  
-✅ Table of Contents  
-✅ Installation instructions  
-✅ How to run the labs  
-✅ Lab list with objectives  
-✅ Optional enhancements  
-✅ License and contact info  
-
----
-
+  
 # 🧠 NLP Lab Manual: 15 Experiments
 
 A complete **Natural Language Processing (NLP)** lab manual containing **15 hands-on experiments** to understand and implement various NLP tasks using **Python**, **NLTK**, and **spaCy**.
@@ -170,8 +157,8 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 If you have any questions, suggestions, or want to contribute, feel free to reach out:
 
-📧 **Email**: your.email@example.com  
-🐙 **GitHub**: [github.com/yourusername](https://github.com/yourusername)
+📧 **Email**: vamsi.darion@gmail.com  
+🐙 **GitHub**: [github.com/vamsidarion](https://github.com/vamsidarion)
 
 ---
 
@@ -181,12 +168,4 @@ This lab manual is designed to help students understand **core NLP concepts** wi
 
 ---
 
-### ✅ Tip:
-You can place this `README.md` at the root of your project folder. It will be automatically rendered by GitHub or any Markdown viewer.
 
-Would you like me to:
-- Generate a **PDF version** of this README?
-- Add a **badge section** (e.g., Python, License, Build Status)?
-- Include a **folder structure** example for organizing the labs?
-
-Let me know how you'd like to finalize your **NLP Lab Manual**!
